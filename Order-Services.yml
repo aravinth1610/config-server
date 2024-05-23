@@ -1,0 +1,26 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    username: afm_dev_training
+    password: afm_dev_training
+    url: jdbc:oracle:thin:@192.168.192.151:1521/aliswb
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        formatSql: true
+    hibernate:
+      ddl-auto: update        
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0      
