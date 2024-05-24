@@ -2,21 +2,20 @@ server:
   port: 8082
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
   datasource:
     username: afm_dev_training
     password: afm_dev_training
     url: jdbc:oracle:thin:@192.168.192.151:1521/aliswb
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
-    show-sql: false
+    show-sql: true
     generate-ddl: true
     properties:
       hibernate:
         formatSql: true
     hibernate:
-      ddl-auto: update        
+      ddl-auto: update           
       
 eureka:
   client:
