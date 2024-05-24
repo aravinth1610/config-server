@@ -1,6 +1,9 @@
 server:
   port: 8082
 spring:
+  profiles:
+    active:
+    - dev
   datasource:
     username: afm_dev_training
     password: afm_dev_training
